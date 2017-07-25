@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/Carloan.css" type="text/css">
+<link rel="stylesheet" href="css/DetailsCeclaration.css">
+<!-- <script data-main="js/online.js" src="js/lib/require.js"></script> -->
+<!--仿IOS城市三级联动 star-->
+<link rel="stylesheet" type="text/css" href="./src/mobile-select-area.css">
+<script type="text/javascript" src="./js/lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./src/dialog.js"></script>
+<script type="text/javascript" src="./src/mobile-select-area.js"></script>
+<!--仿IOS城市三级联动 end-->
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>车贷报单</title>
+</head>
+<body>
+	<div class="onLinetitle">
+		<p>借款信息</p>
+	</div>
+	<div class="onLineBox">
+		<p style="border-top:1px #E6E6E6 solid;">
+			<i style="position:absolute;right:1.6rem;">元</i>
+			 <span class="spanbj1">借款金额</span><input type="text" id="jiekMoney" placeholder="30—3000"/><!--<img class="jiekMoneyImg" src="./images/icon/online_03.jpg" /> -->
+		</p>
+		<p>
+			<span class="spanbj2">借款期限</span>
+			<select id="jiekTime">
+			    <option>请选择借款期限</option>
+			    <option>1个月</option>
+			    <option>2个月</option>
+			    <option>3个月</option>
+			    <option>4个月</option>
+			    <option>5个月</option>
+			    <option>6个月</option>
+			    <option>7个月</option>
+			    <option>8个月</option>
+			    <option>9个月</option>
+			    <option>10个月</option>
+			    <option>11个月</option>
+			    <option>12个月</option>
+			</select>
+			<i class="jiekTimeImg"></i>
+		</p>
+		<p>
+			 <span class="spanbj3">成单月利率</span><input type="text" id="jiekLilv" placeholder="请输入成单月利率"/><!--<img class="jiekLilvImg" src="./images/icon/online_03.jpg" /> -->
+		</p>
+		<p>
+			<span class="spanbj4">预计佣金</span><input type="text" id="jiekYongjin" placeholder="输入完借款信息后自动计算"/>
+		</p>
+	</div>
+	<div class="onLinetitle" style="margin-top:.5rem;">
+		<p>车辆信息</p>
+	</div>
+	<div class="onLineBox">
+		<p>
+			<span style="width:30%;">车辆所在城市</span><input type="text" id="city" style="width:70%;" placeholder="请选择城市"/><i class="cityImg"></i>
+		</p>
+		<p class="carLoanp">
+			<span style="width:30%;">融资方式</span>
+			<span class="divSpan bgBai"><i>车质押</i></span>
+			<span class="divSpan bgBai"><i>车抵押</i></span>
+		</p>
+	</div>
+
+	<div class="onLinetitle" style="margin-top:.5rem;">
+		<p>上传照片</p>
+	</div>
+	<div class="uploadBox" style="margin-bottom:8rem;display:inline-block;">
+		<ul class="imgBox" id="imgBox" style="margin:2rem auto 1rem;">
+			<li>
+				<label for="first"></label>
+				<input type="file" id="first" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Second"></label>
+				<input type="file" id="Second" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Third"></label>
+				<input type="file" id="Third" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Fourth"></label>
+				<input type="file" id="Fourth" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Fifth"></label>
+				<input type="file" id="Fifth" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Sixth"></label>
+				<input type="file" id="Sixth" />
+				<div class="Deposit"></div>
+			</li>
+		</ul>
+	</div>
+
+	<button class="onLineBtn">开始评估</button>
+
+	<div class="Maskbox"></div>
+	<div class="tipsBox">
+		<p class="tipsTitle"><img src="./images/icon/false.png" />在线房产评估</p>
+		<p id="tips">恭喜！您的银行卡绑定成功</p>
+		<button class="Determine">确定</button>
+	</div>
+
+		<script>
+			var json =[{
+					"id": 1,
+					"name": "浙江省",
+					"child": [{
+						"id": "1",
+						"name": "杭州市",
+						"child": [{
+							"id": 1,
+							"name": "滨江区"
+						}, {
+							"id": 2,
+							"name": "西湖区"
+						}, {
+							"id": 2,
+							"name": "余杭区"
+						}, {
+							"id": 2,
+							"name": "留下区"
+						}]
+					}, {
+						"id": "2",
+						"name": "宁波市",
+						"child": []
+					}, {
+						"id": "3",
+						"name": "温州市",
+						"child": []
+					}]
+				}, {
+					"id": 2,
+					"name": "江苏省",
+					"child": [{
+						"id": "1",
+						"name": "南京",
+						"child": [{
+							"id": 1,
+							"name": "解放区"
+						}]
+					}]
+				}, {
+					"id": 3,
+					"name": "湖北省"
+			}];
+		</script>
+		<script>
+			//城市三级联动调用
+			var selectArea = new MobileSelectArea();
+			selectArea.init({trigger:'#city',data:json,default:0,position:"bottom"});
+
+			//融资方式的单选
+			$(".carLoanp>.divSpan").on("click",function(){
+				$(this).addClass("bgRed").siblings("span").removeClass("bgRed");
+			})
+
+			//获取、失去焦点的图片切换
+			$("#jiekMoney").focus(function(){
+			   $(".jiekMoneyImg").attr("src","images/icon/online_04.jpg");
+			});
+			$("#jiekMoney").blur(function(){
+			   $(".jiekMoneyImg").attr("src","images/icon/online_03.jpg");
+			});
+
+			$("#jiekLilv").focus(function(){
+			   $(".jiekLilvImg").attr("src","images/icon/online_04.jpg");
+			});
+			$("#jiekLilv").blur(function(){
+			   $(".jiekLilvImg").attr("src","images/icon/online_03.jpg");
+			});
+      $("#jiekTime").on("focus blur",function() {
+          $(".jiekTimeImg").toggleClass("jiekTimeImgRed");
+      })
+			// $("#jiekTime").focus(function(){
+			//    $(".jiekTimeImg").toggleClass("jiekTimeImgRed");
+			// });
+			// $("#jiekTime").blur(function(){
+			//    $(".jiekTimeImg").attr("src","images/icon/online_01.jpg");
+			// });
+
+
+			//在线房产评估非空验证
+			$(function(){
+				function Maskbox(){
+					var Top = document.documentElement.clientHeight/2-(parseInt($(".tipsBox").height())/2) +'px',
+						Left = document.documentElement.clientWidth/2-(parseInt($(".tipsBox").width()))/2 +'px';
+						$('.Maskbox').fadeIn(300);
+						$('.tipsBox').css("top",Top);
+						$('.tipsBox').css("left",Left);
+						$('.tipsBox').slideDown(500);
+				}
+
+				$(".Determine").click(function(){
+					$('.Maskbox').fadeOut(500);
+					$('.tipsBox').slideUp(200);
+				})
+				$(".Maskbox").click(function(){
+					$('.Maskbox').fadeOut(500);
+					$('.tipsBox').slideUp(200);
+				})
+				//在线房产评估的非空验证
+				$(".onLineBtn").on("click",function(){
+
+					var	jiekMoney = $("#jiekMoney").val(),
+						jiekTime = $("#jiekTime").val(),
+						jiekLilv = $("#jiekLilv").val(),
+						jiekYongjin = $("#jiekYongjin").val();
+
+					if(jiekMoney == ""){
+						Maskbox();
+						$("#tips").text("请输入借款金额");
+					}else if(jiekTime == "请选择借款期限"){
+						Maskbox();
+						$("#tips").text("请选择借款期限");
+					}else if(jiekLilv == ""){
+						Maskbox();
+						$("#tips").text("请输入成单月利率");
+					}else if(jiekYongjin == ""){
+						Maskbox();
+						$("#tips").text("输入完借款信息后自动计算");
+					}else{
+						 window.location.href="https://www.baidu.com/";
+					}
+				})
+
+				//上传图片
+				var str ="";
+				$('input[type="file"]').each(function(i,ele){
+					$(ele).on("change",function(){
+						console.log(ele)
+						upload.GetPicturesUrl($(this));
+					})
+				})
+
+				$(".Deposit").on("click","p",function(){
+					upload.delectImgBox($(this));
+				})
+
+				function Upload(){
+					var self = this;
+					self.GetPicturesUrl = function($this){
+						var fileUrl = $this.val();//获取图片路径
+						console.log(fileUrl)
+						str+='<img src="'+fileUrl+'" alt="" /><p class="close" id="close">×</p>';
+						$this.next("div.Deposit").css({
+							"z-index":1
+						}).html(str)
+						str="";
+						$this.val("");
+					},
+					self.delectImgBox = function($this){
+						$this.parent("div.Deposit").css({
+							"z-index":-1
+						}).html("");
+					}
+				}
+				var upload = new Upload();
+
+			})
+		</script>
+</body>
+</html>

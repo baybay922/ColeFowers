@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/uCenter.css" type="text/css">
+<!-- <script data-main="js/indexNew.js" src="js/lib/require.js"></script> -->
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>我的</title>
+</head>
+<body>
+	<div class="uCenter">
+		<p class="ucenterP1">可用余额</p>
+		<p class="ucenterP2">10000</p>
+		<p class="ucenterP3"><button>提现</button></p>
+	</div>
+	<div class="uCenterbox">
+		<span class="spanBox1">累计实收佣金<br /><i>500元</i></span>
+		<span class="spanBox2"><img src="./images/uCenter/icon_01.png" /></span>
+		<span class="spanBox3">累计收益<br /><i>1000元</i></span>
+		<span class="spanBox4"><img src="./images/uCenter/icon_02.png" /></span>
+		<span class="spanBox5">累计邀请收益<br /><i>500元</i></span>
+		<div class="clear"></div>
+	</div>
+	<div class="uCenterinfor">
+		<a href="./s_我的资产.html">
+			<dl>
+				<dd>我的资产</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+		<a href="./s_我的订单.html">
+			<dl>
+				<dd>我的订单</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+		<a href="">
+			<dl>
+				<dd>我的报单</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+		<a href="./s_认证信息.html">
+			<dl>
+				<dd>认证信息</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+		<a href="./s_认证信息.html">
+			<dl>
+				<dd>报单列表</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+	</div>
+	<div class="uCenterFriend">
+		<a href="./l_邀请好友.html">
+			<dl>
+				<dd>邀请好友</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+	</div>
+	<div class="uCenterhelp">
+		<a href="">
+			<dl>
+				<dd>安全设置</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+		<a href="">
+			<dl>
+				<dd>帮助</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+		<a href="">
+			<dl>
+				<dd>关于我们</dd>
+				<dt><img src="./images/uCenter/arrow.png" /></dt>
+			</dl>
+		</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background:#F5F5F5;}
+.clear{clear:both;}
+.uCenter{width:100%; height:auto; background:url(../images/uCenter/ucenterBj.png) no-repeat center; background-size:100%;}
+.ucenterP1{font-size:1.2rem; color:#fff; text-align:center; padding:2rem 0 .5rem;}
+.ucenterP2{font-size:2rem; color:#fff; text-align:center; }
+.uCenter button{background:none; padding:.5rem 1.5rem; border:1px #fff solid; border-radius:4px; color:#fff;}
+.ucenterP3{text-align:center; padding:1rem 0 1rem;}
+.uCenterbox{width:100%; height:auto; background:#fff; padding:1rem 0; color:#666; font-size:1.1rem;}
+.uCenterbox i{color:#ff8502;}
+.spanBox1 ,.spanBox3,.spanBox5{width:30%; float:left; text-align:center;}
+.spanBox2 ,.spanBox4{width:5%; float:left; text-align:center;}
+.spanBox2 img,.spanBox4 img{margin:.5rem 0;}
+.uCenterinfor{width:100%; height:auto; background:#fff; margin-top:.5rem; display: inline-block;}
+.uCenterinfor dl{width:100%; float:left; height:3.5rem; line-height:3.5rem; font-size:1.2rem; color:#666; border-bottom:1px #F2F2F2 solid;}
+.uCenterinfor dl dd{width:95%; float:left; text-indent:1rem;}
+.uCenterinfor dl dt{width:5%; float:left;}
+.uCenterinfor dl dt img{width:.8rem; vertical-align:middle}
+.uCenterFriend{width:100%; height:auto; background:#fff; margin-top:.5rem; display: inline-block;}
+.uCenterFriend dl{width:100%; float:left; height:3.5rem; line-height:3.5rem; font-size:1.2rem; color:#666; border-bottom:1px #F2F2F2 solid;}
+.uCenterFriend dl dd{width:95%; float:left; text-indent:1rem;}
+.uCenterFriend dl dt{width:5%; float:left;}
+.uCenterFriend dl dt img{width:.8rem; vertical-align:middle}
+.uCenterhelp{width:100%; height:auto; background:#fff; margin-top:.5rem; display: inline-block;}
+.uCenterhelp dl{width:100%; float:left; height:3.5rem; line-height:3.5rem; font-size:1.2rem; color:#666; border-bottom:1px #F2F2F2 solid;}
+.uCenterhelp dl dd{width:95%; float:left; text-indent:1rem;}
+.uCenterhelp dl dt{width:5%; float:left;}
+.uCenterhelp dl dt img{width:.8rem; vertical-align:middle}

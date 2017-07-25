@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background:#F5F5F5;}
+.clear_10{clear:both; height:10px;}
+.tixiantBox{width:100%; height:auto; background:url(../images/uCenter/tixianBj.png); background-size:100%; text-align:center; padding:2rem 0;}
+.tixianText{font-size:1.2rem; color:#fff;}
+.tixianNum{font-size:1.7rem; color:#fff; margin-top:.3rem;}
+.tiXian{width:100%; height:auto; display:inline-block; background:#fff;}
+.tiXian dl{width:100%; height:3.5rem; border-bottom:1px #E6E6E6 solid; font-size:1.2rem; color:#333;}
+.tiXian dl dd{width:20%; float:left; margin-left:3%; line-height:3.5rem;}
+.tiXian dl dt{width:74%; float:left; margin-right:3%; text-align:right; line-height:3.5rem;}
+.tiXian dl dt img{width:2rem; vertical-align:middle; margin:-3px 5px 0 0;}
+.tiXian dl dt input{text-align:right; border:none;}
+.tiXian dl dt button{padding:0 2rem; height:3.5rem; background:#FFB302; color:#fff; font-size:1.4rem; margin-left:1rem;}
+.addCardBtn{position:fixed; bottom:0; width:100%; text-align:center; height:4rem; line-height:4rem; color:#fff; background:#FF4F64; font-size:1.5rem;}
+
+/*----遮罩层----*/
+.Maskbox{width:100%; height:100%; background:#000; position:fixed; z-index:0; display:none; opacity:0.5; 
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); top:0;}
+.tipsBox{width:80%; height:auto; background:#fff; position:fixed; z-index:999; display:none; border-radius:6px;}
+.tipsBox .tipsTitle{text-align:center; font-size:1.4rem;margin:1rem 0; color:#333;}
+.tipsBox .tipsTitle img{width:1.5rem; vertical-align:middle; margin:-3px 5px 0 0;}
+.tipsBox p{text-align:center; color:#666; line-height:2rem; font-size:1.2rem;}
+.tipsBox button{width:100%; height:3rem; line-height:3rem; border:none; background:#FFB302; color:#fff; font-size:1.4rem; border-radius: 0 0 4px 4px;
+	margin-top:1rem; border-radius:0 0 6px 6px;}

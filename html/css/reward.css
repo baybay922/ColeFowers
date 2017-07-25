@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background:#F5F5F5;}
+.clear_10{clear:both; height:10px;}
+.rewardBox{width:100%; height:auto; display:inline-block; padding:1.3rem 0; background:#FFB302;}
+.rewardBox .rewardLe{width:49.7%; float:left; border-right:1px #FDC748 solid; text-align:center; color:#fff;}
+.rewardBox .rewardRi{width:50%; float:left; text-align:center; color:#fff;}
+.rewardBox p{font-size:1.2rem; line-height:2rem;}
+.rewardBox p img{width:1.2rem; vertical-align:middle; margin:-2px 2px 0 0;}
+.rewardBox .rewardNum{font-size:1.4rem;}
+.rewardList{width:100%; height:auto; background:#fff; display:inline-block;}
+.rewardList ul{width:100%; height:auto; }
+.rewardList ul li .listTitle li{color:#333;}
+.rewardList ul li{width:100%; float:left; height:3.5rem; line-height:3.5rem; border-top:1px #E6E6E6 solid; font-size:1.1rem;}
+.rewardList ul li ul{width:94%; padding:0 3%;}
+.rewardList ul li ul li{width:33.33%; float:left; border:none; color:#666;}
+.numRed{color:#ff4f64!important;}

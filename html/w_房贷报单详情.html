@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/sweetAlert.css">
+<link rel="stylesheet" href="css/DetailsCeclaration.css">
+<script data-main="js/DetailsCeclaration.js" src="js/lib/require.js"></script>
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>银行卡绑定</title>
+</head>
+<body class="l_NewScroll">
+	<section class="w_details">
+		<div class="LoanBox">
+			<h2>借款信息</h2>
+			<ul class="Loan_list">
+				<li>
+					<p class="sum">借款金额</p>
+					<p>3000 万</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p class="type">抵押类型</p>
+					<p>一抵</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p class="term">借款期限</p>
+					<p>1 个月</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p class="Interest">成单月利率</p>
+					<p>1.6 %</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p class="Commission">预计佣金</p>
+					<p>100 元</p>
+				</li>
+				<div class="liner"></div>
+			</ul>
+		</div>
+		<div class="information">
+			<h2>房产信息</h2>
+			<ul class="information_list">
+				<li>
+					<p>城市</p>
+					<p>北京</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p >区县</p>
+					<p>朝阳区</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p>地址</p>
+					<p>东大桥南路胡同街道120号</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p>楼牌号</p>
+					<p>1-11</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p>建筑面积</p>
+					<p>100平方米</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p>房产性质</p>
+					<p>已购公房</p>
+				</li>
+				<div class="liner"></div>
+				<li>
+					<p>规划用途</p>
+					<p>住宅</p>
+				</li>
+				<div class="liner"></div>
+			</ul>
+		</div>
+		<div class="uploadBox">
+			<h2 style="border:none;">图片</h2>
+			<ul class="imgBox" id="imgBox">
+				<li>
+					<p class="first">
+						<img src="images/upload.png" alt="">
+					</p>
+					<span>上传房本正面</span>				
+				</li>
+				<li>
+					<p class="Second">
+						<img src="images/upload.png" alt="">
+					</p> 
+					<span>上传房本正面</span>	
+				</li>
+				<li>
+					<p class="Third">
+						<img src="images/upload.png" alt="">
+					</p> 
+					<span>上传房本正面</span>	
+				</li>
+				<li>
+					<p class="Fourth">
+						<img src="images/upload.png" alt="">
+					</p> 
+					<span>上传房本正面</span>	
+				</li>
+				<li>
+					<p class="Fifth">
+						<img src="images/upload.png" alt="">
+					</p> 
+					<span>上传房本正面</span>	
+				</li>
+				<li>
+					<p class="Sixth">
+						<img src="images/upload.png" alt="">
+					</p> 
+					<span>上传房本正面</span>	
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+</html>

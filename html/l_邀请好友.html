@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/Invite.css" type="text/css">
+<script data-main="js/InviteMain.js" src="js/lib/require.js"></script>
+<script type="text/javascript">
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>title</title>
+</head>
+<body class="l_NewScroll">
+<header>
+  <img src="images/invent_Img01.png" alt="">
+  <ul>
+    <li>邀请奖励规则</li>
+    <li>您邀请的好友在平台上成功完成一笔订单，所获<span>佣金的10%</span>，都将作为您的邀请收益自动划入您的资产账户中。</li>
+    <li><span>1000 元</span>  x  10%＝<span>1000 元</span></li>
+  </ul>
+</header>
+<section>
+  <p>邀请方式</p>
+  <ul>
+    <li><p>我的邀请码：<span id="inventCode">DEBA88</span></p><button>分享给好友</button></li>
+    <li><img id="erCode" src="images/invent_Img02.png" alt=""><p>推荐好友，点击扫描二维码</p></li>
+    <li><p>我的邀请分享：</p></li>
+    <li><button>微信好友</button><button>微信朋友圈</button></li>
+  </ul>
+</section>
+<button>立即邀请</button>
+</body>
+</html>

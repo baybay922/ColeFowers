@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/tiXian.css" type="text/css">
+<script data-main="js/addCard.js" src="js/lib/require.js"></script>
+
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>提现</title>
+</head>
+<body>
+	<div class="tixiantBox">
+		<p class="tixianText">可提现金额</p>
+		<p class="tixianNum">1000</p>
+	</div>
+	<div class="tiXian">
+		<dl>
+			<dd>提现金额</dd>
+			<dt><input type="text" id="money" placeholder="请输入大于100元的金额" /></dt>
+		</dl>
+		<dl>
+			<dd>到账银行卡</dd>
+			<dt><img src="./images/uCenter/yhIcon.jpg" />622 **** **** 585</dt>
+		</dl>
+		<dl>
+			<dd>绑定手机号</dd>
+			<dt>138****000</dt>
+		</dl>
+		<dl>
+			<dd>手机验证码</dd>
+			<dt style="line-height:0;"><input type="text" id="code2" placeholder="请输入验证码" /><button id="checkCodeB">获取</button></dt>
+		</dl>
+	</div>
+	<button class="addCardBtn" id="tixCardBtn">确认提现</button>
+	<div class="Maskbox"></div>
+	<div class="tipsBox">
+		<p class="tipsTitle"><img src="./images/icon/false.png" />提现</p>
+		<p id="tips">恭喜！您的银行卡绑定成功</p>
+		<button class="Determine">确定</button>
+	</div>
+</body>
+</html>

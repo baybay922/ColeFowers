@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background:#f5f5f5;}
+.w_wrapper{width: 100%;height: auto;background: #f5f5f5;}
+header{height:auto}
+header .swiper-container, header .swiper-wrapper,header .swiper-slide{height:auto;background:#d5dee0;background-size:20% auto}
+header .swiper-container img, header .swiper-wrapper img, header .swiper-slide img{width:100%;height:100%;display: block;}
+.title{width: 100%;height: 3rem;line-height: 3rem;display: -webkit-box;font-size: 1.2rem;color: #666;border-bottom: 1px solid #f2f2f2;background: #fff;}
+.horn{width:8%; margin-left:2%; position:relative;}
+.horn::before{content: "";position:absolute; width:1.4rem; height:1.4rem; top:50%; left:0; display:inline-block; 
+background: url(../images/horn.png) center no-repeat;background-size: contain;margin-top: -.7rem;}
+.scrollDiv{width:88%; height:35px;/* 必要元素 */line-height:35px;overflow:hidden;/* 必要元素 */}
+.scrollDiv li{height:35px;}
+.scrollDiv ul,li{list-style-type:none;margin:0px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+.scrollDiv ul,li a{color:#666;}
+
+.copy{width: 88%;}
+.time{width: 23%;text-align: right;margin-right: 2%;}
+.service{width: 100%;height: auto;margin: 1rem auto;display: -webkit-flex;justify-content: space-around;background: #fff;padding: 1rem 0;}
+.service dl dd{width: 70%;height: auto;margin: 0 auto;}
+.service dl dd img{width: 100%;height:auto;}
+.service dl dt{text-align: center;color: #999999;}
+.loan{width: 100%;height: auto;}
+.loan dl{width: 100%;height: auto;margin: 1rem auto;padding:1rem 0;background: #fff;display: -webkit-box;}
+.loan dl dd{width: 30%;margin-left: 1.5rem;}
+.loan dl dd img{width: 100%;height: auto;}
+.loan dl dt{width: 60%;text-indent: 20%;color: #414141;font-size: 1.2rem;}
+.loan dl dt h2{font-weight: normal;color: #ffb302;position: relative;margin: 1.5rem 0 .5rem 0;}
+.loan dl dt h2:after{content: "";width: 20%;height: 3px;background: #ffb302;position: absolute;bottom: -.2rem;left: 20%;}
+.Assets{width: 100%;display: -webkit-flex;justify-content: space-around;background: #fafafa;padding:1rem 0;text-align: center;color: #999;margin-bottom: 5.5rem;}
+.Commission p,.Order p{line-height: 1.6rem;}
+.Commission p:nth-child(1),.Order p:nth-child(1){color: #ff4f64;font-size: 1.2rem;}
+/* 底部 */
+
+.pjBlue{color: #ffb302;}
+footer,footer>ul{width: 100%;height: 5rem;}
+footer{background: #fff;position: fixed;left: 0;bottom: 0;}
+footer>ul>li{width: 5rem;height: 5rem;position: absolute;color: #333;font-size: 1rem;}
+footer>ul>li>span{display:block;width: 2rem;height: 2rem;margin: 1rem 0 0 1.5rem;}
+footer>ul>li>p{width: 100%;height: 2rem;line-height: 2rem;text-align: center;}
+footer>ul>li:nth-of-type(1){left: 5%;top:0}
+footer>ul>li:nth-of-type(2){left: 50%;top:0;margin-left: -2.5rem;}
+footer>ul>li:nth-of-type(3){right: 5%;top:0}
+footer>ul>li:nth-of-type(1) .nomarl{background: url(../images/navTAb_icon1_2.png) right center no-repeat;background-size:100% 100%;}
+footer>ul>li:nth-of-type(2) .nomarl{background: url(../images/navTAb_icon2.png) right center no-repeat;background-size:100% 100%;}
+footer>ul>li:nth-of-type(3) .nomarl{background: url(../images/navTAb_icon3.png) right center no-repeat;background-size:100% 100%;}
+footer>ul>li:nth-of-type(1) .checked{background: url(../images/navTAb_icon1.png) left center no-repeat;background-size:100% 100%;}
+footer>ul>li:nth-of-type(2) .checked{background: url(../images/navTAb_icon2_2.png) left center no-repeat;background-size:100% 100%;}
+footer>ul>li:nth-of-type(3) .checked{background: url(../images/navTAb_icon3_2.png) left center no-repeat;background-size:100% 100%;}
+
+
+
+
+
+
+
+
+

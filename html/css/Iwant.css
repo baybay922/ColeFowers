@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{width: 100%;height: 100%;background: #f5f5f5;}
+header{width: 90%;height: auto;padding: 1rem 5%;background: #fff;}
+header>img{width: 100%;display: block;}
+body>p:nth-of-type(1),body>p:nth-of-type(2){width: 100%;color: #666;text-indent: 5%;font-size: 1.2rem;line-height: 2.6rem;}
+section,section>ul{width:100%;}
+section>ul>li{width: 100%;height: 8rem;border-top: solid 1px #f2f2f2;border-bottom: solid 1px #f2f2f2;margin-bottom: 1rem;position: relative;}
+section>ul>li:nth-of-type(1){background: url(../images/upSuccess_Img02.png) 5% 50% no-repeat #fff;background-size: 7.6rem;}
+section>ul>li:nth-of-type(2){background: url(../images/upSuccess_Img01.png) 5% 50% no-repeat #fff;background-size: 7.6rem;}
+section>ul>li::after{content: "";position: absolute;width: 1.2rem;height: 1.2rem;right: 5%;top: 50%;margin-top: -.6rem;border-top: solid 1px #ccc;border-right: solid 1px #ccc;transform: rotate(45deg);}
+section>ul>li>p:nth-of-type(1){position: absolute;width: 6rem;text-align: center;right: 56%;margin-right: -6rem;border-bottom: solid 3px #ffb302;top: 2rem;font-size: 1.4rem;color: #ffb302;}
+section>ul>li>p:nth-of-type(2){position: absolute;width: 56%;right: 0;top: 4.5rem;color: #333;font-size: 1rem;}
+section+p{text-align: center;position: absolute;bottom: 2rem;left: 0;color: #999;width: 100%;}

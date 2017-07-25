@@ -1,0 +1,26 @@
+/* 
+	producer：bay
+	time:2017/1/3 17:30;
+ */
+body,html{width: 100%;height: 100%;position: relative;}
+.liner{width: 100%;height: 1px;background: #f2f2f2;}
+.w_Notarization{width: 100%;height: 100%;background: #f5f5f5;overflow: hidden;}
+.attestation{width: 100%;height: auto;margin-top: 5rem;}
+.attestation dt{width: 25%;height: auto;margin: 0 auto;}
+.attestation dt img{width: 100%;height: 100%;}
+.attestation dd{width: 80%;height: auto;margin: 2rem auto;text-align: center;}
+.attestation dd p{color: #ffb302;font-size: 1.2rem;line-height: 2;}
+.attestation dd p span{color: #666;font-size: 1.6rem;}
+.replace{width: 50%;height: 3rem;line-height: 3rem;margin: 2rem auto;border-radius: 4px;background: #ffb302;text-align: center;display: block;color: #fff;font-size: 1.2rem;}
+
+
+
+
+
+
+
+
+
+
+
+

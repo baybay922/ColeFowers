@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/onLine.css" type="text/css">
+<!-- <script data-main="js/online.js" src="js/lib/require.js"></script> -->
+<!--仿IOS城市三级联动 star-->
+<link rel="stylesheet" type="text/css" href="./src/mobile-select-area.css">
+<script type="text/javascript" src="./js/lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./src/dialog.js"></script>
+<script type="text/javascript" src="./src/mobile-select-area.js"></script>
+<!--仿IOS城市三级联动 end-->
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>在线房产评估</title>
+</head>
+<body>
+	<div class="onLinetitle">
+		<p>评估信息</p>
+	</div>
+	<div class="onLineBox">
+		<p style="border-top:1px #E6E6E6 solid;">
+			<span>城市/区县</span><input type="text" id="city" placeholder="请选择城市"/><img class="cityImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span>地址</span><input type="text" id="address" placeholder="请输入小区名称／地址"/><img class="addressImg" src="./images/icon/online_03.jpg" />
+		</p>
+		
+		<p>
+			<span>楼牌号</span><input type="text" id="floornum" placeholder="请输入小区楼牌号"/><img class="floornumImg" src="./images/icon/online_03.jpg" />
+		</p>
+	
+		<p>
+			<span>建筑面积</span><input type="text" id="architecture" placeholder="请输入建筑面积"/><img class="architectureImg" src="./images/icon/online_03.jpg" />
+		</p>
+		<p>
+			<span>房产性质</span>
+			<select id="house">
+			    <option>请选择房产性质</option>
+			    <option>住宅</option>
+			    <option>公寓商住</option> 
+			    <option>成本房价</option>
+			    <option>别墅</option> 
+			    <option>按经济适用房管理</option>
+			    <option>回迁房</option> 
+			    <option>商业房（实际用途居住）</option>
+			</select>
+			<img class="houseImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span>规划用途</span>
+			<select id="plan">
+			    <option>请选择规划用途</option>
+			    <option>住宅</option>
+			    <option>公寓</option> 
+			    <option>别墅</option>
+			    <option>办公</option>
+			    <option>商住两用</option>
+			    <option>商业</option>
+			    <option>宿舍</option>     
+			</select>
+			<img class="planImg" src="./images/icon/online_01.jpg" />
+		</p>
+	</div>
+	
+	<p class="onlineHelp"><span>如未找到您的房产</span></p>
+	<p class="onlinehref"><a href="">点击人工评估</a></p>
+	<button class="onLineBtn">开始评估</button>
+
+	<div class="Maskbox"></div>
+	<div class="tipsBox">
+		<p class="tipsTitle"><img src="./images/icon/false.png" />在线房产评估</p>
+		<p id="tips">恭喜！您的银行卡绑定成功</p>
+		<button class="Determine">确定</button>
+	</div>
+
+		<script>
+			var json =[{
+					"id": 1,
+					"name": "浙江省",
+					"child": [{
+						"id": "1",
+						"name": "杭州市",
+						"child": [{
+							"id": 1,
+							"name": "滨江区"
+						}, {
+							"id": 2,
+							"name": "西湖区"
+						}, {
+							"id": 2,
+							"name": "余杭区"
+						}, {
+							"id": 2,
+							"name": "留下区"
+						}]
+					}, {
+						"id": "2",
+						"name": "宁波市",
+						"child": []
+					}, {
+						"id": "3",
+						"name": "温州市",
+						"child": []
+					}]
+				}, {
+					"id": 2,
+					"name": "江苏省",
+					"child": [{
+						"id": "1",
+						"name": "南京",
+						"child": [{
+							"id": 1,
+							"name": "解放区"
+						}]
+					}]
+				}, {
+					"id": 3,
+					"name": "湖北省"
+			}];
+		</script>
+		<script>
+			//城市三级联动调用
+			var selectArea = new MobileSelectArea();
+			selectArea.init({trigger:'#city',data:json,default:0,position:"bottom"});
+
+			//获取、失去焦点的图片切换
+			$("#city").focus(function(){
+			   $(".cityImg").attr("src","images/icon/online_02.jpg");  
+			});
+			$("#city").blur(function(){
+			   $(".cityImg").attr("src","images/icon/online_01.jpg");  
+			});
+
+			$("#address").focus(function(){
+			   $(".addressImg").attr("src","images/icon/online_04.jpg");  
+			});
+			$("#address").blur(function(){
+			   $(".addressImg").attr("src","images/icon/online_03.jpg");  
+			});
+
+			$("#floornum").focus(function(){
+			   $(".floornumImg").attr("src","images/icon/online_04.jpg");  
+			});
+			$("#floornum").blur(function(){
+			   $(".floornumImg").attr("src","images/icon/online_03.jpg");  
+			});
+			
+			$("#architecture").focus(function(){
+			   $(".architectureImg").attr("src","images/icon/online_04.jpg");  
+			});
+			$("#architecture").blur(function(){
+			   $(".architectureImg").attr("src","images/icon/online_03.jpg");  
+			});
+
+			$("#house").focus(function(){
+			   $(".houseImg").attr("src","images/icon/online_02.jpg");   
+			});
+			$("#house").blur(function(){
+			   $(".houseImg").attr("src","images/icon/online_01.jpg");  
+			});
+
+			$("#plan").focus(function(){
+			   $(".planImg").attr("src","images/icon/online_02.jpg");   
+			});
+			$("#plan").blur(function(){
+			   $(".planImg").attr("src","images/icon/online_01.jpg");  
+			});
+
+			//在线房产评估非空验证
+			$(function(){
+				function Maskbox(){
+					var Top = document.documentElement.clientHeight/2-(parseInt($(".tipsBox").height())/2) +'px',
+						Left = document.documentElement.clientWidth/2-(parseInt($(".tipsBox").width()))/2 +'px';
+						$('.Maskbox').fadeIn(300);
+						$('.tipsBox').css("top",Top);
+						$('.tipsBox').css("left",Left);
+						$('.tipsBox').slideDown(500);
+				}
+
+				$(".Determine").click(function(){
+					$('.Maskbox').fadeOut(500);
+					$('.tipsBox').slideUp(200);
+				})
+				$(".Maskbox").click(function(){
+					$('.Maskbox').fadeOut(500);
+					$('.tipsBox').slideUp(200);
+				})
+				//在线房产评估的非空验证
+				$(".onLineBtn").on("click",function(){
+					
+					var	city = $("#city").val(),
+						address = $("#address").val(),
+						floornum = $("#floornum").val(),
+						architecture = $("#architecture").val(),
+						house = $("#house").val(),
+						plan = $("#plan").val();
+		 
+					if(city == ""){
+						Maskbox();
+						$("#tips").text("请选择城市");
+					}else if(address == ""){
+						Maskbox();
+						$("#tips").text("请输入小区名称／地址");
+					}else if(floornum == ""){
+						Maskbox();
+						$("#tips").text("请输入小区楼牌号");
+					}else if(architecture == ""){
+						Maskbox();
+						$("#tips").text("请输入建筑面积");
+					}else if(house == "请选择房产性质"){
+						Maskbox();
+						$("#tips").text("请选择房产性质");
+					}else if(plan== "请选择规划用途"){
+						Maskbox();
+						$("#tips").text("请选择规划用途");
+					}else{
+						 window.location.href="https://www.baidu.com/";   
+					}
+				})
+				
+			})
+		</script>
+</body>
+</html>

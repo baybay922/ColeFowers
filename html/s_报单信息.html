@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/Assessment.css" type="text/css">
+<!-- <link rel="stylesheet" href="css/Carloan.css" type="text/css"> -->
+<link rel="stylesheet" href="css/DetailsCeclaration.css">
+<link rel="stylesheet" href="css/mui.picker.css" type="text/css"/>
+<link rel="stylesheet" href="css/mui.css" type="text/css"/>
+<style>
+	.onLineBox p input{padding:0px;font-size:1.1rem;height:35px;}
+	select{width:60%;margin:0px;padding:0px;font-size:1.1rem;}
+	#city{width:60%;text-indent:14px;color:#999;}
+	
+</style>
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>报单信息</title>
+<style>
+	.boxSpan span{width:30%;}
+</style>
+</head>
+<body>
+	
+	<div class="onLinetitle">
+		<p>借款信息</p>
+	</div>
+	<div class="boxSpan">
+		<p style="border-top:1px #E6E6E6 solid;">
+			<i style="position:absolute;right:4rem;">万</i>
+			<span class="spanbj1">借款金额</span><input type="text" id="jiekMoney" placeholder="30—3000"/><img class="jiekMoneyImg" src="./images/icon/online_03.jpg" />
+		</p>
+		<p>
+			<span class="spanbj5">抵押类型</span>
+			<select id="jiekdy">
+			    <option>请选择抵押类型</option>
+			    <option>房抵</option>
+			    <option>车抵</option>
+			</select>
+			<img class="jiekdyImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span class="spanbj2">借款期限</span>
+			<select id="jiekTime">
+			    <option>请选择借款期限</option>
+			    <option>1个月</option>
+			    <option>2个月</option>
+			    <option>3个月</option>
+			    <option>4个月</option>
+			    <option>5个月</option>
+			    <option>6个月</option>
+			    <option>7个月</option>
+			    <option>8个月</option> 
+			    <option>9个月</option>
+			    <option>10个月</option>
+			    <option>11个月</option>
+			    <option>12个月</option>
+			</select>
+			<img class="jiekTimeImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span class="spanbj3">成单月利率</span><input type="text" id="jiekLilv" placeholder="请输入成单月利率"/><img class="jiekLilvImg" src="./images/icon/online_03.jpg" />
+		</p>
+		<p>
+			<span class="spanbj4">预计佣金</span><input type="text" id="jiekYongjin" placeholder="输入完借款信息后自动计算"/>
+		</p>
+	</div>
+	<div class="onLinetitle">
+		<p>基础信息</p>
+	</div>
+	<div class="onLineBox">
+		<p style="border-top:1px #E6E6E6 solid;">
+			<span>房本信息</span>
+			<select id="houseinfor">
+			    <option>请选择有无房本</option>
+			    <option>有房本</option>
+			    <option>无房本</option> 
+			</select>
+			<img class="houseinforImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span>城市/区县</span><span id="city" tabindex="0">选择省市区</span><img class="cityImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span>地址</span><input type="text" id="address" placeholder="请输入小区名称／地址"/><img class="addressImg" src="./images/icon/online_03.jpg" />
+		</p>
+		
+		<p>
+			<span>楼牌号</span><input type="text" id="floornum" placeholder="请输入小区楼牌号"/><img class="floornumImg" src="./images/icon/online_03.jpg" />
+		</p>
+	
+		<p>
+			<span>建筑面积</span><input type="text" id="architecture" placeholder="请输入建筑面积"/><img class="architectureImg" src="./images/icon/online_03.jpg" />
+		</p>
+		<p>
+			<span>房产性质</span>
+			<select id="house">
+			    <option>请选择房产性质</option>
+			    <option>住宅</option>
+			    <option>公寓商住</option> 
+			    <option>成本房价</option>
+			    <option>别墅</option> 
+			    <option>按经济适用房管理</option>
+			    <option>回迁房</option> 
+			    <option>商业房（实际用途居住）</option>
+			</select>
+			<img class="houseImg" src="./images/icon/online_01.jpg" />
+		</p>
+		<p>
+			<span>规划用途</span>
+			<select id="plan">
+			    <option>请选择规划用途</option>
+			    <option>住宅</option>
+			    <option>公寓</option> 
+			    <option>别墅</option>
+			    <option>办公</option>
+			    <option>商住两用</option>
+			    <option>商业</option>
+			    <option>宿舍</option>     
+			</select>
+			<img class="planImg" src="./images/icon/online_01.jpg" />
+		</p>
+	</div>
+	<div class="onLinetitle" style="margin-top:.5rem;">
+		<p>上传照片</p>
+	</div>
+	<div class="uploadBox" style="margin-bottom:8rem;display:inline-block;">
+		<ul class="imgBox" id="imgBox" style="margin:2rem auto 1rem;">
+			<li>
+				<label for="first"></label> 
+				<input type="file" id="first" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Second"></label> 
+				<input type="file" id="Second" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Third"></label> 
+				<input type="file" id="Third" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Fourth"></label> 
+				<input type="file" id="Fourth" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Fifth"></label> 
+				<input type="file" id="Fifth" />
+				<div class="Deposit"></div>
+			</li>
+			<li>
+				<label for="Sixth"></label> 
+				<input type="file" id="Sixth" />
+				<div class="Deposit"></div>
+			</li>
+		</ul>
+	</div>
+	
+	<button class="onLineBtn">开始评估</button>
+
+	<div class="Maskbox"></div>
+	<div class="tipsBox">
+		<p class="tipsTitle"><img src="./images/icon/false.png" />在线房产评估</p>
+		<p id="tips">恭喜！您的银行卡绑定成功</p>
+		<button class="Determine">确定</button>
+	</div>
+	<script src="js2/jquery.min.js"></script>
+	<script src="js2/mui.min.js"></script>
+	<script src="js2/mui.picker.min.js"></script>
+	<script src="js2/data.city.js"></script>
+	<script src="js/baodanInfo.js"></script>
+</body>
+</html>

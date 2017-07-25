@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/*公共css*/
+.pjred{color: #fc5f65;}
+.pjBred{background: #fc5f65;color: #fff;/* border-radius: 4px; */}
+.pjTip{color: #b0d3fb;}
+.pjWrong{color: #ff982b;}
+/*登录页css*/
+html,body{width: 100%;height: 100%;background: #f5f5f5;}
+header{width: 100%;height: 45%;display: inline-block;background: url(../images/login_Img01.png) 50% 50% no-repeat;background-size: 100% 100%;}
+header>img{width: 40%;margin: 20% auto 0;display: block;}
+section{width: 100%;height: auto;padding-top: 1rem;}
+section div{width: 80%;height: 3rem;margin-top: 1.8rem;margin-left: 10%;position: relative;}
+section input{width: 100%;height: 3rem;color:#666666;border: none;border: solid 1px #dedede;font-size: 1.1rem;border-radius: 4px;}
+section div button{width: 30%;height: 3rem;font-size: 1rem;background-color: #ffb302;color: #fff;position: absolute;right: 0;border-radius: 4px;top: 0;font-size: 1.1rem;}
+.l_pswBtn{width:2rem;height:2rem;position: absolute;right: 2%;top: .5rem;background: url(../images/icon/icon_eye1.png) center no-repeat;background-size: 1.4rem;}
+.l_pswBtn2{background: url(../images/icon/icon_eye2.png) center no-repeat;background-size: 1.4rem;}
+.l_uncheck{width: 1rem;height: 1rem;border: solid 1px #fc5f65;border-radius: 2px;position: absolute;left: 2%;top: 1rem;}
+.l_checked{background: url(../images/icon/icon_check.png) center no-repeat;background-size: .8rem;}
+.mainText{color:#b6b6b6;position: absolute;left: 14%;top: 1rem;}
+.l_load{width: 100%;margin: 4rem 0 0 0;height: 3rem;font-size: 1.4rem;}
+.l_load+p{width: 100%;margin: 2rem 0;text-align: center;color:#b6b6b6;}
+.l_regTip{display: block;height: 1rem;font-size: 1rem;line-height: 1.6rem;width: 100%;text-align: center;}
+.swal2-modal h2{font-size: 1.8rem!important}
+.l_del{width: 1.4rem;height: 1.4rem;position: absolute;right: 2%;top: 50%;margin-top: -.7rem;background: url(../images/icon/icon_delete.png) center no-repeat;background-size: contain;display: none;}
+.l_checkCode .l_del{right: 44%;}
+.l_pswBox .l_del{right: 16%;}
+.input3{width: 60%;}
+.l_checkCode .l_regTip{width: 60%;}

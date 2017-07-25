@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="msapplication-tap-highlight" content="no" />
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script data-main="js/index.js" src="js/lib/require.js"></script>
+<script type="text/javascript">
+//rem自适应字体大小方法
+var docEl = document.documentElement,
+resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+recalc = function() {
+    //设置根字体大小
+    docEl.style.fontSize = 10 * (docEl.clientWidth / 320) + 'px';
+};
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+<title>首页</title>
+</head>
+<body class="l_NewScroll">
+	<section class="w_wrapper">
+		<header class="head">
+				<div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide" data-hash="slide1">
+			            	<a href=""><img src="images/banner.png" alt=""></a>
+			            </div>
+			            <div class="swiper-slide" data-hash="slide2">
+			            	<a href=""><img src="images/banner.png" alt=""></a>
+			            </div>
+			            <div class="swiper-slide" data-hash="slide3">
+			            	<a href=""><img src="images/banner.png" alt=""></a>
+			            </div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			        <!-- Add Arrows -->
+			    </div>
+		</header>
+		<div class="title">
+			<div class="horn" >
+				
+			</div>
+			
+			<div id="scrollDiv" class="scrollDiv">
+				<ul>
+					<li><a href="">1、为了赶上合规的趋势，平台特意降息等发布相关事宜</a></li>
+					<li><a href="">2、为了赶上合规的趋势，平台特意降息等发布相关事宜</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<div class="service">
+			<dl>
+				<dd><img src="images/assess.png" alt=""></dd>
+				<dt>房产评估</dt>
+			</dl>
+			<dl>
+				<dd><img src="images/search.png" alt=""></dd>
+				<dt>查询服务</dt>
+			</dl>
+			<dl>
+				<dd><img src="images/Invitation.png" alt=""></dd>
+				<dt>邀请好友</dt>
+			</dl>
+		</div>
+		<div class="loan">
+			<dl class="Mortgage">
+				<dd><img src="images/Mortgage.png" alt=""></dd>
+				<dt>
+					<h2 class="house">房贷</h2>
+					<p>有房就能贷，期限利率灵活</p>
+				</dt>
+			</dl>
+			<dl class="Carloan">
+				<dd><img src="images/Carloan.png" alt=""></dd>
+				<dt>
+					<h2 class="car">车贷</h2>
+					<p>有房就能贷，期限利率灵活</p>
+				</dt>
+			</dl>
+		</div>
+		<div class="Assets">
+			<div class="Commission">
+				<p>329.119.260.22</p>
+				<p>发放佣金（元）</p>
+			</div>
+			<div class="Order">
+				<p>260</p>
+				<p>累计订单（人）</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+	  <ul>
+	    <li>
+	      <span class="nomarl checked"></span>
+	      <p class="pjBlue">首页</p>
+	    </li>
+	    <li>
+	      <span class="nomarl"></span>
+	      <p>牧场</p>
+	    </li>
+	    <li>
+	      <span class="nomarl"></span>
+	      <p>我的</p>
+	    </li>
+	  </ul>
+	</footer>
+	<script type="text/javascript">
+	function AutoScroll(obj){
+		//console.log(obj);
+		$(obj).find("ul:first").animate({
+			marginTop:"-25px"
+		},500,function(){
+			$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+			//console.log(this);
+		});
+	}
+
+
+	setInterval('AutoScroll("#scrollDiv")',2000);
+	
+	</script>
+</body>
+</html>
